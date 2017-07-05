@@ -10,7 +10,7 @@ class SubImage:
 
     def __eq__(self, other):
         if isinstance(other, SubImage):
-            return self._image == other._image
+            return np.array_equal(self._image, other._image)
         return NotImplementedError("Comparison not implemented for types other then SubImage")
 
 
