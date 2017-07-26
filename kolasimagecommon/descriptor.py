@@ -2,11 +2,12 @@ import numpy as np
 
 
 class Descriptor:
-    def __init__(self, vector):
+    def __init__(self, vector: np.ndarray):
+        assert isinstance(vector, np.ndarray), "vector must be a numpy array"
         self._vector = np.array(vector)
 
     @property
-    def vector(self):
+    def vector(self) -> np.ndarray:
         return self._vector
 
     def __eq__(self, other):

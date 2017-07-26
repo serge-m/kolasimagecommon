@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 setup(name='kolasimagecommon',
-      version='0.0.1',
+      version='0.0.2',
       description='Common interfaces for image processing',
       author='sergem',
       author_email='sbmatyunin@gmail.com',
