@@ -11,6 +11,10 @@ class Descriptor:
     def vector(self) -> np.ndarray:
         return self._vector
 
+    @property
+    def vector_as_lists(self) -> Iterable:
+        return self._vector.tolist()
+
     def __eq__(self, other):
         if isinstance(other, Descriptor):
             return np.array_equal(self.vector, other.vector)
