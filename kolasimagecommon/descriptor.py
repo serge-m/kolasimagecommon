@@ -1,9 +1,10 @@
 import numpy as np
+from collections import Iterable
 
 
 class Descriptor:
     def __init__(self, vector: np.ndarray):
-        assert isinstance(vector, np.ndarray), "vector must be a numpy array"
+        assert isinstance(vector, np.ndarray) or isinstance(vector, Iterable), "vector must be a numpy array"
         self._vector = np.array(vector)
 
     @property
